@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gallery | Colours Crêperie</title>
+
+  <meta
+    name="description"
+    content="Explore the Colours Crêperie gallery: handcrafted crêpes, waffles, desserts, drinks, garden moments, and the sweet atmosphere of Kakopetria."
+  />
+
+  <meta
+    name="keywords"
+    content="Colours Crêperie, crepes, crêpes, waffles, dessert, cafe, restaurant, Kakopetria, Cyprus"
+  />
+
+  <link rel="canonical" href="https://yourdomain.com/gallery.html" />
+  <link rel="alternate" hreflang="en" href="https://yourdomain.com/gallery.html" />
+  <link rel="alternate" hreflang="el" href="https://yourdomain.com/gallery-el.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body class="gallery-page">
+
+  <!-- Go To Top Button -->
+  <button class="go-to-top" id="goToTop" aria-label="Go to top">
+    ↑
+  </button>
+
+  <!-- Mobile Menu -->
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="site-logo" aria-label="Colours Crêperie Home">
+        <img src="assets/images/logo.webp" alt="Colours Crêperie logo">
+      </a>
+
+      <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close mobile menu">
+        ×
+      </button>
+    </div>
+
+    <div class="mobile-menu__top-info">
+      <a href="https://maps.app.goo.gl/zdUJ5k9Ay6P8TMNZ9" class="mobile-menu__info-item">
+        <i data-lucide="map-pin"></i>
+        <span>Kakopetria, Cyprus</span>
+      </a>
+
+      <a href="tel:+35722045045" class="mobile-menu__info-item">
+        <i data-lucide="phone"></i>
+        <span>+357 22045045</span>
+      </a>
+
+      <a href="mailto:coloursfoodcy@gmail.com" class="mobile-menu__info-item">
+        <i data-lucide="mail"></i>
+        <span>coloursfoodcy@gmail.com</span>
+      </a>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index-el.html">Ελληνικά</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <!-- Page Transition -->
+  <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+      <div class="container top-bar__inner">
+
+        <a href="https://maps.app.goo.gl/zdUJ5k9Ay6P8TMNZ9" class="top-bar__item">
+          <i data-lucide="map-pin"></i>
+          <span>Kakopetria, Cyprus</span>
+        </a>
+
+        <a href="tel:+35722045045" class="top-bar__item">
+          <i data-lucide="phone"></i>
+          <span>+357 22045045</span>
+        </a>
+
+        <a href="mailto:coloursfoodcy@gmail.com" class="top-bar__item">
+          <i data-lucide="mail"></i>
+          <span>coloursfoodcy@gmail.com</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="navbar">
+      <div class="container navbar__inner">
+
+        <a href="index.html" class="site-logo" aria-label="Colours Crêperie Home">
+          <img src="assets/images/logo.webp" alt="Colours Crêperie logo">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="index-el.html" class="lang-switch" aria-label="Switch to Greek">
+            GR
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open mobile menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+      <img
+        src="assets/images/gallery/gallery-hero.webp"
+        alt="Colours Crêperie gallery hero"
+        class="gallery-hero__image"
+        fetchpriority="high"
+      >
+
+      <div class="gallery-hero__overlay"></div>
+
+      <div class="container gallery-hero__content">
+        <p class="section-label">Colours Crêperie</p>
+
+        <h1>Our Gallery</h1>
+
+        <p>
+          Sweet moments, colourful plates, cozy corners, and the warm feeling of
+          Kakopetria captured through our favourite memories.
+        </p>
+
+        <div class="gallery-hero__buttons">
+          <a href="#gallery-grid" class="btn btn--primary">Explore Gallery</a>
+
+          <a
+            href="https://maps.app.goo.gl/zdUJ5k9Ay6P8TMNZ9"
+            target="_blank"
+            class="btn btn--secondary"
+          >
+            Find Us on Map
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="gallery-intro section-spacing">
+      <div class="container">
+        <div class="section-heading section-heading--center gallery-reveal">
+          <p class="section-label">Colours Crêperie</p>
+
+          <h2>Gallery</h2>
+
+          <p>
+            A visual taste of our crêpes, waffles, drinks, desserts, and garden atmosphere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE GRID -->
+    <section id="gallery-grid" class="gallery-section">
+      <div class="container">
+
+        <div class="gallery-grid">
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-1.webp" alt="Fresh crêpe with chocolate" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-2.webp" alt="Colours Crêperie dessert plate" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-3.webp" alt="Waffle with toppings" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-4.webp" alt="Cold coffee and dessert" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-card--tall gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-5.webp" alt="Garden seating at Colours Crêperie" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-6.webp" alt="Sweet pancakes" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-7.webp" alt="Chocolate dessert closeup" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-card--wide gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-8.webp" alt="Colours Crêperie interior atmosphere" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-9.webp" alt="Milkshake and dessert table" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-10.webp" alt="Fresh fruit dessert" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-11.webp" alt="Menu picture at Colours Crêperie" loading="lazy">
+          </button>
+
+          <button class="gallery-card gallery-reveal" type="button">
+            <img src="assets/images/gallery/gallery-12.webp" alt="Cozy crêperie table setup" loading="lazy">
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUOTE CTA -->
+    <section class="gallery-quote section-spacing">
+      <div class="container">
+        <div class="gallery-quote__box gallery-reveal">
+          <p class="section-label">Visit Us</p>
+
+          <h2>
+            Every colour, every flavour, every detail is made to be remembered.
+          </h2>
+
+          <a
+            href="https://maps.app.goo.gl/zdUJ5k9Ay6P8TMNZ9"
+            target="_blank"
+            class="btn btn--primary"
+          >
+            Find Us on Map
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+
+      <div class="footer__column">
+        <a href="index.html" class="footer-logo" aria-label="Colours Crêperie Home">
+          <img src="assets/images/footer-logo.webp" alt="Colours Crêperie logo">
+        </a>
+
+        <p>
+          Handcrafted flavors, rustic warmth, and a memorable destination for every visit.
+        </p>
+      </div>
+
+      <div class="footer__column">
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Monday - Sunday: 08:00 - 23:50</li>
+          <li>Wednesday: Closed</li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h3>Socials</h3>
+
+        <ul class="social-list">
+          <li>
+            <a href="https://www.instagram.com/colourscreperie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/colourscreperie/" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.tiktok.com/@colourscrperie" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+              <span>TikTok</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h3>Contact</h3>
+
+        <ul>
+          <li><a href="tel:+35722045045">+357 22045045</a></li>
+          <li><a href="mailto:coloursfoodcy@gmail.com">coloursfoodcy@gmail.com</a></li>
+          <li><a href="https://maps.app.goo.gl/zdUJ5k9Ay6P8TMNZ9">Kakopetria, Cyprus</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h3>Links</h3>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- GALLERY LIGHTBOX - must stay inside body, after footer -->
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="gallery-lightbox__close" type="button" aria-label="Close gallery">
+      ×
+    </button>
+
+    <div class="gallery-lightbox__counter">
+      <span class="gallery-lightbox__current">1</span>
+      /
+      <span class="gallery-lightbox__total">12</span>
+    </div>
+
+    <button
+      class="gallery-lightbox__nav gallery-lightbox__nav--prev"
+      type="button"
+      aria-label="Previous image"
+    >
+      ‹
+    </button>
+
+    <div class="gallery-lightbox__stage">
+      <img
+        src=""
+        alt=""
+        class="gallery-lightbox__image"
+        draggable="false"
+      >
+    </div>
+
+    <button
+      class="gallery-lightbox__nav gallery-lightbox__nav--next"
+      type="button"
+      aria-label="Next image"
+    >
+      ›
+    </button>
+
+    <div class="gallery-lightbox__tools">
+      <button type="button" data-gallery-zoom="out" aria-label="Zoom out">−</button>
+      <button type="button" data-gallery-zoom="in" aria-label="Zoom in">+</button>
+      <button type="button" data-gallery-reset aria-label="Reset zoom">Reset</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+
+</body>
+</html>
