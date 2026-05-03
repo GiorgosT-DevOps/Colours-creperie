@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let rotateX = 0;
       let rotateY = 10;
       let inertiaFrame = 0;
+      let hasStarted = false;
 
       const getRadius = () => {
         const radius = parseFloat(
@@ -204,6 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       const initGallery = () => {
+        if (hasStarted) return;
+
+        hasStarted = true;
         rotatingGallery.classList.add("is-visible");
         scene.style.transform = "rotateX(-7deg)";
         scene.style.transition = "transform 4s";
@@ -228,6 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       rotatingGallery.addEventListener("pointerdown", (event) => {
+        if (!hasStarted) return;
+
         window.cancelAnimationFrame(inertiaFrame);
         playSpin(false);
         startX = event.clientX;
@@ -236,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       rotatingGallery.addEventListener("pointermove", (event) => {
+        if (!hasStarted) return;
         if (!rotatingGallery.hasPointerCapture(event.pointerId)) return;
 
         deltaX = event.clientX - startX;
@@ -248,6 +255,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       rotatingGallery.addEventListener("pointerup", (event) => {
+        if (!hasStarted) return;
+
         if (rotatingGallery.hasPointerCapture(event.pointerId)) {
           rotatingGallery.releasePointerCapture(event.pointerId);
         }
@@ -261,7 +270,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       window.addEventListener("resize", () => positionCards("0s"));
 
-      window.setTimeout(initGallery, 50);
+      if ("IntersectionObserver" in window) {
+        const galleryObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              window.setTimeout(initGallery, 50);
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.01,
+            rootMargin: "0px",
+          }
+        );
+
+        galleryObserver.observe(rotatingGallery);
+      } else {
+        window.setTimeout(initGallery, 50);
+      }
     });
   });
 
