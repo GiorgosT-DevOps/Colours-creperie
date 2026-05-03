@@ -8254,7 +8254,7 @@ body.gallery-page .gallery-hero,
 }
 
 .rotating-gallery__ring {
-  animation: miniGallerySpin 60s infinite linear;
+  animation: none;
 }
 
 .rotating-gallery__card {
@@ -8420,4 +8420,183 @@ body.gallery-page .gallery-hero,
   .rotating-gallery__card::before {
     transition-duration: 0.01ms !important;
   }
+}
+
+
+/* ============================= */
+/* SIGNATURE MENU ITEM COLOURS */
+/* Solid colour boxes matching item names */
+/* ============================= */
+
+.menu-item.featured {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(31, 31, 31, 0.08);
+  box-shadow: 0 22px 55px rgba(31, 31, 31, 0.12);
+}
+
+.menu-item.featured h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  text-transform: lowercase;
+  margin-bottom: 12px;
+}
+
+.menu-item.featured small {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Sweet crêpes */
+.purple-item {
+  background: #6f4aa8 !important;
+  color: #fff8f0;
+}
+
+.beige-item {
+  background: #d8c2a4 !important;
+  color: #1f1f1f;
+}
+
+.gray-item {
+  background: #7c7c7c !important;
+  color: #fff8f0;
+}
+
+.brown-item {
+  background: #7a4a2a !important;
+  color: #fff8f0;
+}
+
+.burgundy-item {
+  background: #7b1e3a !important;
+  color: #fff8f0;
+}
+
+.ocher-item {
+  background: #b9812f !important;
+  color: #fff8f0;
+}
+
+.gold-item {
+  background: #d8a760 !important;
+  color: #1f1f1f;
+}
+
+/* Savory crêpes */
+.ivory-item {
+  background: #f1e2c7 !important;
+  color: #1f1f1f;
+}
+
+.cypresses-item {
+  background: #2f5b45 !important;
+  color: #fff8f0;
+}
+
+.azure-item {
+  background: #2f91b3 !important;
+  color: #fff8f0;
+}
+
+.somon-item {
+  background: #e58a75 !important;
+  color: #1f1f1f;
+}
+
+.khaki-item {
+  background: #8a8450 !important;
+  color: #fff8f0;
+}
+
+/* Club sandwiches */
+.black-item {
+  background: #141414 !important;
+  color: #fff8f0;
+}
+
+.white-item {
+  background: #fffaf0 !important;
+  color: #1f1f1f;
+  border: 1px solid rgba(31, 31, 31, 0.14);
+}
+
+.green-item {
+  background: #3f7a47 !important;
+  color: #fff8f0;
+}
+
+/* Text inheritance inside coloured cards */
+.menu-item.featured h3,
+.menu-item.featured p,
+.menu-item.featured strong {
+  color: inherit;
+}
+
+.menu-item.featured small {
+  color: rgba(255, 248, 240, 0.72);
+}
+
+/* Dark text cards need darker nutritional text */
+.beige-item small,
+.gold-item small,
+.ivory-item small,
+.somon-item small,
+.white-item small {
+  color: rgba(31, 31, 31, 0.62);
+}
+
+/* Price badge for stronger readability */
+.menu-item.featured strong {
+  align-self: start;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.beige-item strong,
+.gold-item strong,
+.ivory-item strong,
+.somon-item strong,
+.white-item strong {
+  background: rgba(31, 31, 31, 0.08);
+}
+
+/* Optional hover polish */
+.menu-item.featured {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.menu-item.featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(31, 31, 31, 0.18);
+  filter: saturate(1.08);
+}
+
+/* White signature box: force black text */
+.white-item,
+.white-item h3,
+.white-item p,
+.white-item strong,
+.white-item small {
+  color: #1f1f1f !important;
+}
+
+.white-item {
+  background: #fffaf0 !important;
+  border: 1px solid rgba(31, 31, 31, 0.14);
+}
+
+.white-item strong {
+  background: rgba(31, 31, 31, 0.08) !important;
+}
+
+.white-item small {
+  color: rgba(31, 31, 31, 0.65) !important;
 }
