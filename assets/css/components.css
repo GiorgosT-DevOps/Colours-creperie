@@ -8600,3 +8600,35 @@ body.gallery-page .gallery-hero,
 .white-item small {
   color: rgba(31, 31, 31, 0.65) !important;
 }
+
+@media (max-width: 680px) {
+  #ingredients .menu-mini-grid,
+  #beverages .menu-mini-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #ingredients .mini-menu-item,
+  #beverages .mini-menu-item {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+
+  #ingredients .mini-menu-item h3,
+  #beverages .mini-menu-item h3 {
+    font-size: 0.86rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  #ingredients .mini-menu-item p,
+  #beverages .mini-menu-item p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  #ingredients .mini-menu-item strong,
+  #beverages .mini-menu-item strong {
+    font-size: 0.9rem;
+  }
+}
