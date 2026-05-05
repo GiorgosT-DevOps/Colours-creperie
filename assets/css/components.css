@@ -8632,3 +8632,87 @@ body.gallery-page .gallery-hero,
     font-size: 0.9rem;
   }
 }
+
+.menu-category-nav a.ingredient-nav-link {
+  background: rgba(216, 167, 96, 0.16);
+  border-color: rgba(138, 90, 60, 0.18);
+  color: #5f5148;
+  font-size: 0.7rem;
+}
+
+.menu-category-nav a.ingredient-nav-link:hover {
+  background: #1f1f1f;
+  border-color: #1f1f1f;
+  color: #fff8f0;
+}
+
+.ingredient-group {
+  scroll-margin-top: 150px;
+}
+
+.ingredient-group .mini-menu-item {
+  box-shadow: 0 12px 30px rgba(31, 31, 31, 0.05);
+}
+
+.ingredient-group--cheese .mini-menu-item {
+  background: #fff3ba;
+  border-color: rgba(191, 143, 26, 0.32);
+}
+
+.ingredient-group--cheese .mini-menu-item strong {
+  color: #805e00;
+}
+
+.ingredient-group--cold-cuts .mini-menu-item {
+  background: #dbeeff;
+  border-color: rgba(68, 127, 178, 0.28);
+}
+
+.ingredient-group--cold-cuts .mini-menu-item strong {
+  color: #1d5f93;
+}
+
+.ingredient-group--vegetables .mini-menu-item {
+  background: #dff2d8;
+  border-color: rgba(75, 139, 72, 0.28);
+}
+
+.ingredient-group--vegetables .mini-menu-item strong {
+  color: #3f7a47;
+}
+
+.ingredient-group--sauces .mini-menu-item {
+  background: #ffe1d6;
+  border-color: rgba(184, 87, 52, 0.25);
+}
+
+.ingredient-group--sauces .mini-menu-item strong {
+  color: #9a4a2f;
+}
+
+.ingredient-group--sweet-fruits .mini-menu-item {
+  background: #ffe2ed;
+  border-color: rgba(185, 88, 125, 0.24);
+}
+
+.ingredient-group--sweet-fruits .mini-menu-item strong {
+  color: #9d3e67;
+}
+
+.ingredient-group--sweet-spreads .mini-menu-item {
+  background: #eadfff;
+  border-color: rgba(116, 83, 164, 0.24);
+}
+
+.ingredient-group--sweet-spreads .mini-menu-item strong {
+  color: #694c96;
+}
+
+.ingredient-group--sweet-other .mini-menu-item {
+  background: #ffe8c7;
+  border-color: rgba(184, 122, 45, 0.26);
+}
+
+.ingredient-group--sweet-other .mini-menu-item strong {
+  color: #9a6623;
+}
