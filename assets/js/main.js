@@ -292,48 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  // =============================
-// FULL MENU PDF MODAL
-// =============================
-
-(function () {
-  const modal = document.querySelector("[data-menu-pdf-modal]");
-  const openButtons = document.querySelectorAll("[data-open-menu-pdf]");
-  const closeButtons = document.querySelectorAll("[data-close-menu-pdf]");
-
-  if (!modal || !openButtons.length) return;
-
-  function openMenuPdf() {
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeMenuPdf() {
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  openButtons.forEach((button) => {
-    button.addEventListener("click", openMenuPdf);
-  });
-
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", closeMenuPdf);
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (!modal.classList.contains("is-open")) return;
-
-    if (event.key === "Escape") {
-      closeMenuPdf();
-    }
-  });
-})();
-
-
 // Home sections smooth fade-in
 (() => {
   const sections = document.querySelectorAll(
