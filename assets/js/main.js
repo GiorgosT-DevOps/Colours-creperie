@@ -10,12 +10,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatbotFloatButton = document.getElementById("chatbotFloatButton");
   const pageTransition = document.getElementById("pageTransition");
 
-  /* Page load animation */
+  /* Page load / browser history transition reset */
+  function resetPageTransition() {
+    if (!pageTransition) return;
+
+    pageTransition.classList.remove("is-leaving");
+    pageTransition.classList.add("is-loaded");
+  }
+
   if (pageTransition) {
-    requestAnimationFrame(() => {
-      pageTransition.classList.add("is-loaded");
+    requestAnimationFrame(resetPageTransition);
+
+    window.addEventListener("pageshow", resetPageTransition);
+    window.addEventListener("pagehide", () => {
+      pageTransition.classList.remove("is-leaving");
+    });
+    window.addEventListener("popstate", resetPageTransition);
+  }
+
+  /* Restore autoplay videos after browser Back/Forward navigation */
+  function playHeroVideos() {
+    document.querySelectorAll(".hero__video").forEach((video) => {
+      video.muted = true;
+      video.playsInline = true;
+
+      const playAttempt = video.play();
+
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {});
+      }
     });
   }
+
+  requestAnimationFrame(playHeroVideos);
+  window.addEventListener("pageshow", playHeroVideos);
+  window.addEventListener("focus", playHeroVideos);
 
   /* Mobile menu */
   function openMenu() {
